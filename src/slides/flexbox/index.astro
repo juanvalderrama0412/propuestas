@@ -1,0 +1,52 @@
+---
+import CSSPropertyDemo from "./components/CSSPropertyDemo.svelte";
+
+export const title = "CSS Flexbox";
+export const authors = ["Henrique Ramos"];
+export const publishedAt = "2025-01-27";
+export const description = "Do you even flex?";
+export const draft = false;
+---
+
+<section>
+  <h2>What is Flexbox?</h2>
+  <ul>
+    <li>One-dimensional layout model</li>
+    <li>Distributes space along a single direction</li>
+    <li>Powerful alignment capabilities</li>
+  </ul>
+</section>
+
+<section>
+  <CSSPropertyDemo
+    title="Simple Flexbox Container"
+    client:load
+    property="display"
+    values={["flex"]}
+  />
+</section>
+
+<section>
+  <CSSPropertyDemo
+    client:load
+    property="justify-content"
+    values={["flex-start", "center", "flex-end", "space-between", "space-around", "space-evenly"]}
+  />
+</section>
+
+<section>
+  <CSSPropertyDemo
+    client:load
+    property="align-items"
+    values={["flex-start", "center", "flex-end", "stretch"]}
+  />
+</section>
+
+<section>
+  <CSSPropertyDemo
+    client:load
+    property="flex-direction"
+    values={["row", "row-reverse", "column", "column-reverse"]}
+  />
+</section>
+
